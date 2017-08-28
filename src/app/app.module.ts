@@ -1,17 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
 // Import the Animations module
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 
-// Import the ButtonsModule
-import { ButtonsModule } from '@progress/kendo-angular-buttons';
-import { ChartsModule } from '@progress/kendo-angular-charts';
-import { GridModule } from '@progress/kendo-angular-grid';
-import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
-import { DialogModule } from '@progress/kendo-angular-dialog';
+
 
 import 'hammerjs';
 
@@ -22,11 +19,8 @@ import 'hammerjs';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    ButtonsModule,
-    ChartsModule,
-    DateInputsModule,
-    DialogModule,
-    GridModule
+    DropDownsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

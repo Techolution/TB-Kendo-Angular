@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Kendo Labs!';
-
+  color: string;
+  colors: string[] = ['black', 'blue', 'burgundy', 'red', 'yellow', 'brown', 'tan', 'pink'];
 }

@@ -1,4 +1,31 @@
 <h1>
-    Welcome to {{title}}!
+    Forms Lab
 </h1>
+
+<form #form="ngForm" class="k-form">
+  <div class="example-config">
+      The selected color is <strong>{{ color }}</strong>
+  </div>
+  <div>
+      <label>
+          Select a Favorite Color:
+          <kendo-autocomplete
+              name="color"
+              [data]="colors"
+              [(ngModel)]="color"
+          >
+          </kendo-autocomplete>
+      </label>
+  </div>
+  <div class="k-form-field">
+    <input type="radio" name="group" id="radio1" class="k-radio" checked />
+    <label class="k-radio-label" for="radio1">RadioButton 1</label>
+
+    <input type="radio" name="group" id="radio2" class="k-radio" disabled />
+    <label class="k-radio-label" for="radio2">RadioButton 2</label>
+
+    <input type="radio" name="group" class="k-radio" id="radio3" />
+    <label class="k-radio-label" for="radio3">RadioButton 3</label>
+ </div>
+</form>
 
