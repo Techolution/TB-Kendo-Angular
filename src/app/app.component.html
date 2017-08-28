@@ -1,47 +1,14 @@
 <h1>
-    Welcome to {{title}}!
+    Button Lab!
 </h1>
-<div>
-  <kendo-datepicker [value]="value"></kendo-datepicker>
-</div>
 <button kendoButton 
-        (click)="onButtonClick()" 
-        [primary]="true">My Kendo UI Button</button>
+        (click)="onButtonClick()"
+        [disabled]="disabled"
+        [primary]="true">My Button!</button>
 
-<kendo-dropdownbutton [data]="settingData" [textField]="'label'" (itemClick)="onItemClicked($event)">
-  User Settings
+<kendo-dropdownbutton [data]="disabledToggleOpts" 
+                      [textField]="'label'" 
+                      (itemClick)="onItemClicked($event)">
+                      Toggle Disabled State
 </kendo-dropdownbutton>
-
-<p>
-  A sparkline is a very small chart
-  <kendo-sparkline [data]="data" type="column"></kendo-sparkline>
-</p>
-
-<kendo-grid [kendoGridBinding]="gridData"
-            [height]="410"
-            [pageSize]="10"
-            [pageable]="true"
-            [sortable]="true"
-            [filterable]="true"
-            [groupable]="true"
-            [selectable]="true"
-            (selectionChange)="handleSelectionChange($event)">
-            
-            
-  <kendo-grid-column field="ProductID" title="ID" width="40">
-  </kendo-grid-column>
-  <kendo-grid-column field="ProductName" title="Name" width="250">
-  </kendo-grid-column>
-  <kendo-grid-column field="Category.CategoryName" title="Category">
-  </kendo-grid-column>
-  <kendo-grid-column field="UnitPrice" title="Price" width="80">
-  </kendo-grid-column>
-  <kendo-grid-column field="UnitsInStock" title="In stock" width="80">
-  </kendo-grid-column>
-  <kendo-grid-column field="Discontinued" title="Discontinued" width="120">
-      <ng-template kendoGridCellTemplate let-dataItem>
-          <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
-      </ng-template>
-  </kendo-grid-column>
-</kendo-grid>
 
