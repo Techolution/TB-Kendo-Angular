@@ -1,21 +1,6 @@
 <h1>
-    Welcome to {{title}}!
+    Grid Lab
 </h1>
-<div>
-  <kendo-datepicker [value]="value"></kendo-datepicker>
-</div>
-<button kendoButton 
-        (click)="onButtonClick()" 
-        [primary]="true">My Kendo UI Button</button>
-
-<kendo-dropdownbutton [data]="settingData" [textField]="'label'" (itemClick)="onItemClicked($event)">
-  User Settings
-</kendo-dropdownbutton>
-
-<p>
-  A sparkline is a very small chart
-  <kendo-sparkline [data]="data" type="column"></kendo-sparkline>
-</p>
 
 <kendo-grid [kendoGridBinding]="gridData"
             [height]="410"
@@ -26,8 +11,7 @@
             [groupable]="true"
             [selectable]="true"
             (selectionChange)="handleSelectionChange($event)">
-            
-            
+                    
   <kendo-grid-column field="ProductID" title="ID" width="40">
   </kendo-grid-column>
   <kendo-grid-column field="ProductName" title="Name" width="250">
@@ -43,5 +27,6 @@
           <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
       </ng-template>
   </kendo-grid-column>
+  
 </kendo-grid>
 
