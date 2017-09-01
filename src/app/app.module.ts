@@ -1,17 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule }    from '@angular/http';
 
 import { AppComponent } from './app.component';
 
 // Import the Animations module
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// Import the ButtonsModule
-import { ButtonsModule } from '@progress/kendo-angular-buttons';
-import { ChartsModule } from '@progress/kendo-angular-charts';
 import { GridModule } from '@progress/kendo-angular-grid';
-import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
-import { DialogModule } from '@progress/kendo-angular-dialog';
+
+import { GridDataService } from './gridData.service';
+
+
+
 
 import 'hammerjs';
 
@@ -22,13 +23,10 @@ import 'hammerjs';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    ButtonsModule,
-    ChartsModule,
-    DateInputsModule,
-    DialogModule,
-    GridModule
+    GridModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [GridDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
